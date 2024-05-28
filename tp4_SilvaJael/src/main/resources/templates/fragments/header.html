@@ -4,25 +4,50 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ 
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg bg-body-tertiary" data-th-fragment="navbar">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+ <!-- Navbar -->
+ 	<header>
+ 	<nav class="navbar navbar-expand-lg navbar-light bg-light" data-th-fragment="navbar">
+	<div class="container">
+	        <!-- Logo -->
+	        <a class="navbar-brand" href="#">
+	            <img class="object-cover w-100" src="https://fi.unju.edu.ar/images/fi-logo.png" alt="Logo" >
+	        </a>
+
+	            <!-- Toggle button -->
+			    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
+	
+	        <!-- Navigation links -->
+	        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	            <ul class="nav navbar-nav ml-auto">
+	                <li class="active" style="background-color: #45526e">
+	                    <a class="nav-link" style="color:  #fff" href="#">INICIO</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="#">ACERCA DE</a>
+	                </li>
+	                <li class="nav-item dropdown">
+			          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			            CARRERAS
+			          </a>
+			          <ul class="dropdown-menu">
+			            <li><a class="dropdown-item" href="#">Action</a></li>
+			            <li><a class="dropdown-item" href="#">Another action</a></li>
+			            <li><hr class="dropdown-divider"></li>
+			            <li><a class="dropdown-item" href="#">Something else here</a></li>
+			          </ul>
+			        </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="#">NOTICIAS</a>
+	                </li>
+	                <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            CONTACTOS
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -30,67 +55,157 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-<!-- <nav class="navbar" data-th-fragment="navbar">
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
-        <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
-        <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
-        <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
-      </ul>
-    </div>
-  </nav>
+        </li>	                
+	            </ul>
+	            
+					          
+	        </div>
+	        <!-- Search form -->
+	    	              <form class="d-flex w-auto">
+					<input type="search" class="form-control" placeholder="Buscar" aria-label="Search">	        
+	    		  </form>
+			       <span class="input-group-text border-0" id="search-addon">
+			    <i class="fas fa-search"></i>
+			  </span>
 
-<div data-th-fragment="pagination">
-	  <ul class="pagination">
-    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-    <li class="active"><a href="#!">1</a></li>
-    <li class="waves-effect"><a href="#!">2</a></li>
-    <li class="waves-effect"><a href="#!">3</a></li>
-    <li class="waves-effect"><a href="#!">4</a></li>
-    <li class="waves-effect"><a href="#!">5</a></li>
-    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-  </ul>
-</div> -->
+			  </div>
+	 	   
+	</nav>
+ 	
+ 	</header>
 
-<div data-th-fragment="footer" >
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
-</div>
+		<!-- Footer -->
+		  <footer
+		          class="text-center text-lg-start text-white"
+		          style="background-color: #45526e" data-th-fragment="footer"
+		          >
+		    <!-- Grid container -->
+		    <div class="container p-4 pb-0">
+		      <!-- Section: Links -->
+		      <section class="">
+		        <!--Grid row-->
+		        <div class="row">
+		          <!-- Grid column -->
+		          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+		            <h6 class="text-uppercase mb-4 font-weight-bold">
+		              Sobre nosotros
+		            </h6>
+		            <p>
+		Con veinte carreras ofrecidas, todas ellas de alto impacto en la industria, la Facultad de Ingeniería - UNJu demuestra que es posible mantener las convicciones, estimular las vocaciones, y establecer la finalidad de todas las acciones que encaramos en beneficio de nuestras alumnas y alumnos.
+		            </p>
+		          </div>
+		          <!-- Grid column -->
+		
+		          <hr class="w-100 clearfix d-md-none" />
+		
+		          <!-- Grid column -->
+		          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+		            <h6 class="text-uppercase mb-4 font-weight-bold">enlaces de interes</h6>
+		            <p>
+		              <a class="text-white">SIU Gurani</a>
+		            </p>
+		            <p>
+		              <a class="text-white">Becas Unju</a>
+		            </p>
+		            <p>
+		              <a class="text-white"> Protocolos de Bioseguridad</a>
+		            </p>
+		            <p>
+		              <a class="text-white">Campus FI</a>
+		            </p>
+		          </div>
+		          <!-- Grid column -->
+		
+		          <hr class="w-100 clearfix d-md-none" />
+		
+		          <!-- Grid column -->
+		          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+		            <p>
+		              <a class="text-white">Términos y Condiciones</a>
+		            </p>
+		            <p>
+		              <a class="text-white"> Sistema de Bibliotecas de la UNJu</a>
+		            </p>
+		            <p>
+		              <a class="text-white">Modelos de Notas</a>
+		            </p>
+		            <p>
+		              <a class="text-white">Ayuda</a>
+		            </p>
+		          </div>
+		
+		          <!-- Grid column -->
+		          <hr class="w-100 clearfix d-md-none" />
+		
+		          <!-- Grid column -->
+		          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+		            <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
+		            <p><i class="fas fa-home mr-3"></i> Ítalo Palanca Nº 10</p>
+		            <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+		            <p><i class="fas fa-phone mr-3"></i> + 01 0101010110</p>
+		            <p><i class="fas fa-print mr-3"></i> + 01 0101010110</p>
+		          </div>
+		          <!-- Grid column -->
+		        </div>
+		        <!--Grid row-->
+		      </section>
+		      <!-- Section: Links -->
+		
+		      <hr class="my-3">
+		
+		      <!-- Section: Copyright -->
+		      <section class="p-3 pt-0">
+		        <div class="row d-flex align-items-center">
+		          <!-- Grid column -->
+		          <div class="col-md-7 col-lg-8 text-center text-md-start">
+		            <!-- Copyright -->
+		            <div class="p-3">
+		              © 2024 Copyright:
+		              <a class="text-white" href="#"
+		                 >rubyyy</a
+		                >
+		            </div>
+		            <!-- Copyright -->
+		          </div>
+		          <!-- Grid column -->
+		
+		          <!-- Grid column -->
+		          <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+		            <!-- Facebook -->
+		            <a
+		               class="btn btn-outline-light btn-floating m-1 text-white"
+		               role="button"
+		               ><i class="fab fa-facebook-f"></i
+		              ></a>
+		
+		            <!-- Twitter -->
+		            <a
+		               class="btn btn-outline-light btn-floating m-1"
+		               role="button"
+		               ><i class="fab fa-twitter"></i
+		              ></a>
+		
+		            <!-- Google -->
+		            <a
+		               class="btn btn-outline-light btn-floating m-1"
+		               role="button"
+		               ><i class="fab fa-google"></i
+		              ></a>
+		
+		            <!-- Instagram -->
+		            <a
+		               class="btn btn-outline-light btn-floating m-1"
+		               role="button"
+		               ><i class="fab fa-instagram"></i
+		              ></a>
+		          </div>
+		          <!-- Grid column -->
+		        </div>
+		      </section>
+		      <!-- Section: Copyright -->
+		    </div>
+		    <!-- Grid container -->
+		  </footer>
+  <!-- Footer -->
 </body>
 </html>
