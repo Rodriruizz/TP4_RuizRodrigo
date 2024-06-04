@@ -39,7 +39,6 @@ I will show you how to change a height of a standard Bootstrap navbar.
 }
 
 .dropdown>.dropdown-toggle:active {
-  /*Without this, clicking will make it sticky*/
     pointer-events: none;
 }
 
@@ -58,4 +57,14 @@ I will show you how to change a height of a standard Bootstrap navbar.
   position: absolute;
   top: -40px;
   left: 19px;
+}
+.bg-1 {
+    background-image: url("https://remezcla.com//wp-content/uploads/2018/04/GettyImages-800927736-1150x768.jpg");
+  	background-size: 75%;
+  	
+  	}
+
+  .logo-small {
+  color: white;
+  font-size: 50px;
 }
