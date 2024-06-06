@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-/* 
-
-I will show you how to change a height of a standard Bootstrap navbar.
-
-*/
-
 .navbar {
   min-height: 80px;
 }
@@ -68,3 +62,23 @@ I will show you how to change a height of a standard Bootstrap navbar.
   color: white;
   font-size: 50px;
 }
+
+	/* 	FORM STYLE */
+	
+.mask-custom {
+  backdrop-filter: blur(9px);
+  background-color: rgba(243,239,245,0.35);
+}
+
+.bg-image{
+	background-image: url("https://mcdn.wallpapersafari.com/medium/13/72/ls1Zu0.jpg")
+	
+}
+	
+	
+	
+	
+	
+	
+	
+	
