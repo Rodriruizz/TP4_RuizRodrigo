@@ -12,12 +12,10 @@ public class ListadoCarreras {
 	
 	// Método para listar carreras
 		  public static List<Carrera> listarCarreras() {
-			  List<Carrera> carrerasFiltradas = new ArrayList<>();
-			    for (Carrera carrera : carreras) {
-			        if (carrera.getEstado()) {
-			            carrerasFiltradas.add(carrera);
-			        }
-			    }
+				
+				  List<Carrera> carrerasFiltradas = new ArrayList<>(); for (Carrera carrera :
+				  carreras) { if (carrera.getEstado()) { carrerasFiltradas.add(carrera); } }
+				 
 			    return carrerasFiltradas;
 		  }
 
@@ -40,7 +38,8 @@ public class ListadoCarreras {
 
 		  // Método para modificar una carrera
 		  public static void modificarCarrera(Carrera carreraModificada) {
-		    for (int i = 0; i < carreras.size(); i++) {
+			  carreraModificada.setEstado(true);
+			  for (int i = 0; i < carreras.size(); i++) {
 		      Carrera carrera = carreras.get(i);
 		      if (carrera.getCodigo().equals(carreraModificada.getCodigo())) {
 		        carreras.set(i, carreraModificada);
@@ -58,20 +57,10 @@ public class ListadoCarreras {
 			  for (int i = 0; i < carreras.size(); i++) {
 			      Carrera carrera = carreras.get(i);
 			      if (carrera.getCodigo().equals(codigo)) {
-			        carrera.setEstado(false);;
+			        carrera.setEstado(false);
 			        break;
 			      }
 			    }
 		  }
 		  
-			/*
-			 * public static void modificarCarrera (Carrera carrera) throws Exception {
-			 * boolean encontrado = false; 
-			 * try { for (Carrera carre : carreras) {
-			 * carre.getCodigo) == carrera getCodigo()) { carre. setNombre(carrera-getNombre());
-			 * carre.setCantidadAnios(carrera-getCantidadAnios());
-			 * carre.setEstado(carrera.isEstado()); encontrado = true; if( lencontrado) {
-			 * throw new Exception ("La carrera con código " + carrera getCodigo() +
-			 * }catch(Exception e) { System.out-printin(e-getMessage()); throw e;
-			 */
 }

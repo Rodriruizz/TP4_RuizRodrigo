@@ -23,6 +23,7 @@ public class CarreraController {
 			ModelAndView modelView = new ModelAndView("formCarrera");
 			//agrega el objeto
 			modelView.addObject("nuevaCarrera", nuevaCarrera);	
+			modelView.addObject("flag", false);
 			
 			return modelView;
 		}
@@ -47,34 +48,35 @@ public class CarreraController {
 			
 			//mostrar el nuevo listado
 			ModelAndView modelView = new ModelAndView("listaCarrera");
-			modelView.addObject("listadoCarreras", ListadoCarreras.listarCarreras());	
+			modelView.addObject("listadoCarreras", ListadoCarreras.listarCarreras())
+			
+			;	
 			
 			return modelView;		
 			}
+		
+		@GetMapping("/modificarCarrera/{codigo}")
+		public ModelAndView editCarrera(@PathVariable(name = "codigo") String codigo) {
+		    // Buscar la carrera por el código
+		    Carrera carreraModificada = ListadoCarreras.buscarCarreraPorCodigo(codigo);
 
-//			/*
-//			 * @GetMapping("/modificar/{codigo}") public ModelAndView
-//			 * getModificarCarreraPage(@PathVariable(value = "codigo") String codigo) { //
-//			 * Buscar la carrera por el código Carrera carreraEncontrada =
-//			 * ListadoCarreras.buscarCarreraPorCodigo(codigo);
-//			 * 
-//			 * ModelAndView modelView = new ModelAndView("formCarrera");
-//			 * modelView.addObject("edicion", true); // Agregar la bandera de edición
-//			 * modelView.addObject("carrera", carreraEncontrada);
-//			 * modelView.addObject("titulo", "Modificar Carrera");
-//			 * 
-//			 * return modelView; }
-//			 * 
-//			 * @PostMapping("/modificar") public ModelAndView
-//			 * modificarCarrera(@ModelAttribute("carrera") Carrera carreraM) { // Lógica
-//			 * para modificar la carrera ListadoCarreras.modificarCarrera(carreraM);
-//			 * 
-//			 * ModelAndView modelView = new ModelAndView("listaCarrera");
-//			 * modelView.addObject("carreras", ListadoCarreras.listarCarreras());
-//			 * modelView.addObject("titulo", "Carreras");
-//			 * 
-//			 * return modelView; }
-//			 */
+		    ModelAndView modelView = new ModelAndView("formCarrera");			
+		    modelView.addObject("nuevaCarrera", carreraModificada);
+		    modelView.addObject("band", true);
+		    
+		    return modelView;
+		}
+		
+		@PostMapping("/modificarCarrera")
+		public ModelAndView modificarCarrera(@ModelAttribute("nuevaCarrera") Carrera carreraModificada) {
+		    // Lógica para modificar la carrera
+		    ListadoCarreras.modificarCarrera(carreraModificada);
+
+		    ModelAndView modelView = new ModelAndView("listaCarrera");
+		    modelView.addObject("listadoCarreras", ListadoCarreras.listarCarreras());
+
+		    return modelView;
+		}
 
 
 

@@ -27,12 +27,13 @@
 	                  <div class="card-body py-5 px-4 p-md-5">
 	
 	                    <form data-th-object="${nuevaCarrera}" 
-							data-th-action="@{/guardarCarrera}" 
-							method="post">
+							data-th-action="${band}?@{/modificarCarrera}:@{/guardarCarrera}" 
+							method="post"
+							>
 	                      <h3 class="fw-bold mb-4" id="titulo" style="color: #92aad0;">Formulario Carrera</h3>
 	
 						<div class="form-outline mb-4">
-	                        <input type="text" id="codigo" class="form-control" data-th-field="*{codigo}"/>
+	                        <input type="text" id="codigo" class="form-control" data-th-field="*{codigo}" data-th-readonly="${band}"/>
 	                        <label class="form-label" for="codigo">Codigo</label>
 	                      </div>
 	                      
