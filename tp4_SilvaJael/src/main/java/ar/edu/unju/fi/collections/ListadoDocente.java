@@ -2,11 +2,9 @@ package ar.edu.unju.fi.collections;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Component;
 
 import ar.edu.unju.fi.model.Docente;
 
-@Component
 public class ListadoDocente {
 	
 public static List<Docente> docentes = new ArrayList<Docente>();
@@ -27,24 +25,24 @@ public static List<Docente> docentes = new ArrayList<Docente>();
 	  }
 
 	  // Método para agregar una materia
-	  public static void agregarDocente(Docente d) {
+	  public static void agregarDocentes(Docente d) {
 	    docentes.add(d);
 	  }
 
 	  // Método para modificar una materia
-	  public static void modificarDocente(Docente docenteModificado) {
-	    for (int i = 0; i < docentes.size(); i++) {
-	      Docente docente = docentes.get(i);
-	      if (docente.getLegajo().equals(docenteModificado.getLegajo())) {
-	        docentes.set(i, docenteModificado);
-	        break;
-	      }
-	    }
-	  }
+	  public static void modificarDocentes(Docente docenteModificado) {
+		    for (int i = 0; i < docentes.size(); i++) {
+		      Docente docente = docentes.get(i);
+		      if (docente.getLegajo().equals(docenteModificado.getLegajo())) {
+		        docentes.set(i, docenteModificado);
+		        break;
+		      }
+		    }
+		  }
 
 	  // Método para eliminar una materia
-	  public static void eliminarDocente(String leg) {
-	    docentes.removeIf(docente -> docente.getLegajo().equals(leg));
+	  public static void eliminarDocentes(String leg) {
+		  docentes.removeIf(docente -> docente.getLegajo().equals(leg));
 	  }
 
 }

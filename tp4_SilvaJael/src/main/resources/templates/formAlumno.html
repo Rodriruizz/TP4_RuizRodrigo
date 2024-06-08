@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Formulario Docente</title>
+<title>Formulario Alumno</title>
 	<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}"> 
 	<link rel="stylesheet" href="/css/style.css"> 
 	
@@ -26,14 +26,17 @@
 	                <div class="col-md-12 d-flex align-items-center">
 	                  <div class="card-body py-5 px-4 p-md-5">
 	
-	                    <form data-th-object="${nuevoDocente}" data-th-action="${band}?@{/modificarDocente}:@{/guardarDocente}" method="post">
-	                      <h3 class="fw-bold mb-4" id="titulo" style="color: #92aad0;">Formulario Docente</h3>
+	                    <form data-th-object="${nuevoAlumno}" 
+							data-th-action="${band}?@{/modificarAlumno}:@{/guardarAlumno}" 
+							method="post"
+							>
+	                      <h3 class="fw-bold mb-4" id="titulo" style="color: #92aad0;">Formulario Alumno</h3>
 	
-						
-	                      <div class="form-outline mb-4">
+						<div class="form-outline mb-4">
 	                        
-	                        <label class="form-label" for="+legajo">Legajo</label>
-	                        <input type="text" id="legajo" class="form-control" data-th-field="*{legajo}" data-th-readonly="${band}" required/>
+	                        <div>
+	                        <label class="form-label" for="dni">DNI</label>
+	                        <input type="text" id="dni" class="form-control" data-th-field="*{dni}" data-th-readonly="${band}" required/>
 	                      </div>
 						
 						<div class="form-outline mb-4">
@@ -46,10 +49,6 @@
 	                        <label class="form-label" for="apellido">Apellido</label>
 	                      </div>
 	                      
-						<!-- <div class="form-outline mb-4">
-	                        <input type="number" id="dni" class="form-control" data-th-field="*{dni}" required/>
-	                        <label class="form-label" for="dni">DNI</label>
-	                      </div> -->
 	                      
 	                      <div class="form-outline mb-4">
 	                        <input type="number" id="telefono" class="form-control" data-th-field="*{telefono}" required/>
@@ -61,26 +60,28 @@
 	                        <label class="form-label" for="correo">Correo</label>
 	                      </div>
 	                      
-<!-- 	                      <div class="form-outline mb-4">
-	                        <input type="text" id="localidad" class="form-control" data-th-field="*{localidad}" required/>
-	                        <label class="form-label" for="localidad">Localidad</label>
+	                      <div class="form-outline mb-4">
+	                        <input type="date" id="fechaNac" class="form-control" data-th-field="*{fechaNac}" required/>
+	                        <label class="form-label" for="fechaNac">Fecha de Nacimiento</label>
 	                      </div>
 	                      
 	                      <div class="form-outline mb-4">
-	                        <input type="text" id="direccion" class="form-control" data-th-field="*{direccion}" required/>
-	                        <label class="form-label" for="direccion">Direccion</label>
-	                      </div> -->
+	                        <input type="text" id="domicilio" class="form-control" data-th-field="*{domicilio}" required/>
+	                        <label class="form-label" for="domicilio">Domicilio</label>
+	                      </div>
 	
-<!-- 	                      <div class="form-outline mb-4">
-	                        <input type="text" id="materia" class="form-control" data-th-field="*{materia}" required/>
-	                        <label class="form-label" for="materia">Materia</label>
-	                      </div> -->
+	                      <div class="form-outline mb-4">
+	                        <input type="text" id="lu" class="form-control" data-th-field="*{LU}" required/>
+	                        <label class="form-label" for="lu">Libreta Universitaria</label>
+	                      </div>
+	                      
+	                      </div>
 	
 	                      <div class="d-flex justify-content-end pt-1 mb-4">
-	                        <button type="submit" class="btn btn-custom btn-outline-light btn-rounded ">Guardar Docente</button>
+	                        <button type="submit" class="btn btn-custom btn-outline-light btn-rounded ">Guardar Alumno</button>
 	                      </div>
 	                      <hr>
-	                      <a class="link link-light float-end" href="/docentes">Ver listado de carreras</a>
+	                      <a class="link link-light float-end" href="/alumnos">Ver listado de alumnos</a>
 	                    </form>
 	
 	                  </div>

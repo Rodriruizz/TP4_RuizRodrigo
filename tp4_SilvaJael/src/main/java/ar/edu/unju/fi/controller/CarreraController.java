@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
-
 import ar.edu.unju.fi.collections.ListadoCarreras;
 import ar.edu.unju.fi.model.Carrera;
 
@@ -23,7 +22,7 @@ public class CarreraController {
 			ModelAndView modelView = new ModelAndView("formCarrera");
 			//agrega el objeto
 			modelView.addObject("nuevaCarrera", nuevaCarrera);	
-			modelView.addObject("flag", false);
+			modelView.addObject("band", false);
 			
 			return modelView;
 		}
@@ -78,7 +77,13 @@ public class CarreraController {
 		    return modelView;
 		}
 
-
+		@GetMapping("/carreras")
+		public ModelAndView showCarreras() {
+			//mostrar el listado
+			ModelAndView modelView = new ModelAndView("listaCarrera");
+			modelView.addObject("listadocarrera", ListadoCarreras.listarCarreras());	
+			return modelView;		
+		}
 
 }
 
