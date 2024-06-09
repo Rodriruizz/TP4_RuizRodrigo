@@ -29,6 +29,7 @@ public class AlumnoController {
 		//mostrar el listado
 		ModelAndView modelView = new ModelAndView("listaAlumnos");
 		modelView.addObject("listadoAlumno", ListadoAlumno.listarAlumnos());	
+		System.out.println(alumnoAGuardar.getDni());
 		return modelView;	
 	}
 	

@@ -22,6 +22,8 @@ public class Carrera {
 		this.estado = estado;
 	}
 
+
+
 	public String getCodigo() {
 		return codigo;
 	}
@@ -54,5 +56,8 @@ public class Carrera {
 		this.estado = estado;
 	}
 	 
+	public boolean isEstado() {
+		return estado;
+	}
 	 
 }

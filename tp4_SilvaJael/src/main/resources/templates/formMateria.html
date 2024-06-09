@@ -38,22 +38,22 @@
 	                      </div>
 	                      
 	                      <div class="form-outline mb-4">
-	                        <input type="text" id="nombre" class="form-control" data-th-field="*{nombre}" />
+	                        <input type="text" id="nombre" class="form-control" data-th-field="*{nombre}" required/>
 	                        <label class="form-label" for="nombre">Nombre de la materia</label>
 	                      </div>
 	
 	                      <div class="form-outline mb-4">
-	                        <input type="number" id="cantidad" class="form-control" data-th-field="*{cantidadHoras}"/>
+	                        <input type="number" id="cantidad" class="form-control" data-th-field="*{cantidadHoras}" required/>
 	                        <label class="form-label" for="cantidad">Cantidad de Horas</label>
 	                      </div>
 	                      
 	                      <div class="form-outline mb-4">
-	                        <input type="text" id="curso" class="form-control" data-th-field="*{curso}"/>
+	                        <input type="text" id="curso" class="form-control" data-th-field="*{curso}" required/>
 	                        <label class="form-label" for="curso">Curso</label>
 	                      </div>
 	                      
 	                      <div class="form-outline mb-4">
-	                        <select id="modalidad" class="form-control bg-dark text-white" data-th-field="*{modalidad}">
+	                        <select id="modalidad" class="form-control" data-th-field="*{modalidad}" required>
 					<option value="Virtual">Virtual</option>
 					<option value="Presencial">Presencial</option>
 			</select>
@@ -61,17 +61,17 @@
 	                      </div>
 	
 	                      <div class="form-outline mb-4">
-	                   	<select id="docente" data-th-field="*{docente.legajo}" class="form-select bg-dark text-white" required>
+	                   	<select id="docente" data-th-field="*{docente.legajo}" class="form-select">
 							<option value="">Seleccionar Docente</option>
-							<option data-th-each="d:${listadoDocente}" data-th-value="${d.legajo}" data-th-text="${d.apellido}"></option>
+							<option data-th-each="d:${listadoDocentes}" data-th-value="${d.legajo}" data-th-text="${d.apellido}"></option>
 					</select>
 	                        <label class="form-label" for="docente">Docente</label>
 	                      </div>
 	                      
 	                      <div class="form-outline mb-4">
-	                        <select id="carrera" data-th-field="*{carrera.codigo}" class="form-select bg-dark text-white" required>
+	                        <select id="carrera" data-th-field="*{carrera.codigo}" class="form-select">
 								<option value="">Seleccionar Carrera</option>
-								<option data-th-each="c:${listadoCarrera}" data-th-value="${c.codigo}" data-th-text="${c.nombre}"></option>
+								<option data-th-each="c:${listadoCarreras}" data-th-value="${c.codigo}" data-th-text="${c.nombre}"></option>
 							</select>
 	                        <label class="form-label" for="carrera">Materia</label>
 	                      </div>
@@ -80,7 +80,7 @@
 	                        <button type="submit" class="btn btn-custom btn-outline-light btn-rounded ">Guardar Carrera</button>
 	                      </div>
 	                      <hr>
-	                      <a class="link link-light float-end" href="/listaCarrera">Ver listado de carreras</a>
+	                      <a class="link link-light float-end" href="/materias">Ver listado de carreras</a>
 	                    </form>
 	
 	                  </div>

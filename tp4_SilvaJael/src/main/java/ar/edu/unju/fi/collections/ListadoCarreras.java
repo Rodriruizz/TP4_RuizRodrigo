@@ -14,8 +14,12 @@ public class ListadoCarreras {
 		  public static List<Carrera> listarCarreras() {
 				
 				  List<Carrera> carrerasFiltradas = new ArrayList<>(); for (Carrera carrera :
-				  carreras) { if (carrera.getEstado()) { carrerasFiltradas.add(carrera); } }
+				  carreras) { if (carrera.isEstado()) { carrerasFiltradas.add(carrera); } }
 				 
+				  if (carreras.isEmpty()) {
+					  carrerasFiltradas.add(new Carrera("1", "APU", 3, true));
+				  }
+				  
 			    return carrerasFiltradas;
 		  }
 
@@ -62,5 +66,6 @@ public class ListadoCarreras {
 			      }
 			    }
 		  }
+		 
 		  
 }

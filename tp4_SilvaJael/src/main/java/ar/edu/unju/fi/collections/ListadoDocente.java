@@ -2,7 +2,6 @@ package ar.edu.unju.fi.collections;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import ar.edu.unju.fi.model.Docente;
 
 public class ListadoDocente {
@@ -11,6 +10,10 @@ public static List<Docente> docentes = new ArrayList<Docente>();
 	
 	// Método para listar materias
 	  public static List<Docente> listarDocentes() {
+		  
+		  if (docentes.isEmpty()) {
+			  docentes.add(new Docente("123", "Ruby", "Belrose", "r@k","234"));
+		  }
 	    return docentes;
 	  }
 

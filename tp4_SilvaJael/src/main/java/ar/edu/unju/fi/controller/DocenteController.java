@@ -45,7 +45,7 @@ public class DocenteController {
 		
 		//mostrar el listado
 		ModelAndView modelView = new ModelAndView("listaDocentes");
-		modelView.addObject("listadoDocente", ListadoDocente.listarDocentes());	
+		modelView.addObject("listadoDocentes", ListadoDocente.listarDocentes());	
 		
 		return modelView;		
 	}
@@ -62,11 +62,34 @@ public class DocenteController {
 		return modelView;		
 		}
 	
+	@GetMapping("/modificarDocente/{legajo}")
+	public ModelAndView editdocente(@PathVariable(name = "legajo") String legajo) {
+	    // Buscar la docente por el código
+	    Docente docenteModificada = ListadoDocente.buscarDocentePorLegajo(legajo);
+
+	    ModelAndView modelView = new ModelAndView("formDocente");			
+	    modelView.addObject("nuevoDocente", docenteModificada);
+	    modelView.addObject("band", true);
+	    
+	    return modelView;
+	}
+	
+	@PostMapping("/modificarDocente")
+	public ModelAndView modificardocente(@ModelAttribute("nuevoDocente") Docente docenteModificada) {
+	    // Lógica para modificar la docente
+	    ListadoDocente.modificarDocentes(docenteModificada);
+
+	    ModelAndView modelView = new ModelAndView("listaDocentes");
+	    modelView.addObject("listadoDocentes", ListadoDocente.listarDocentes());
+
+	    return modelView;
+	}
+	
 	@GetMapping("/docentes")
-	public ModelAndView showDocentes() {
+	public ModelAndView mostrarDocentes() {
 		//mostrar el listado
 		ModelAndView modelView = new ModelAndView("listaDocentes");
-		modelView.addObject("listadodocente", ListadoDocente.listarDocentes());	
+		modelView.addObject("listadoDocentes", ListadoDocente.listarDocentes());	
 		return modelView;		
 	}
 		 
