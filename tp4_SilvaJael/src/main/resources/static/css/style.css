@@ -24,7 +24,6 @@
 .navbar-light .nav-item .nav-link:hover {
   background-color: #45526e;
   transition: all 0.3s ease;
-  border-radius: 0.25rem;
   color: #fff;
 }
 
@@ -63,6 +62,49 @@
   font-size: 50px;
 }
 
+.btn-blue{
+	background-color: #45526e;
+  transition: all 0.3s ease;
+  color: #fff;
+	
+}
+.btn-blue:hover{
+	background-color: #2e3649;
+  transition: all 0.3s ease;
+  color: #fff;
+	
+}
+	
+.accordion-button:not(.collapsed) {
+  color: #FFF  !important;
+  background-color: #45526e !important;
+}
+
+
+.accordion-button:link, .accordion-button:visited, .accordion-button:hover, .accordion-button:active  {
+  background-color: #45526e !important;
+    color:#FFF !important;
+    text-decoration: none !important;
+     border: hidden !important;
+       border-color: #FFF !important;
+    box-shadow: 0px !important;
+
+      
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: #FFF !important;
+  outline: 0;
+  box-shadow: 0 0 0 .25rem #FFF !important;
+}
+
+    .accordion-button:not(.collapsed)::after {
+  background-clip: white;
+  transform:rotate(180deg) 
+  
+  }
+
 	/* 	FORM STYLE */
 	
 .mask-custom {
@@ -74,9 +116,8 @@
 	background-image: url("https://mcdn.wallpapersafari.com/medium/13/72/ls1Zu0.jpg")
 	
 }
-	
-	
-	
+
+
 	
 	
 	

@@ -85,8 +85,6 @@ public class MateriaController {
 		//mostrar el listado
 		ModelAndView modelView = new ModelAndView("listaMaterias");
 		modelView.addObject("listadoMateria", ListadoMateria.listarMaterias());
-		modelView.addObject("listadoDocentes", ListadoDocente.listarDocentes());
-		modelView.addObject("listadoCarreras", ListadoCarreras.listarCarreras());
 		return modelView;		
 	}
 }
